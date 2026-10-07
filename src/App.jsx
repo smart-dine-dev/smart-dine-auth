@@ -4,6 +4,8 @@ import { OtpVerifyModal } from "./components/auth/OtpVerifyModal";
 import { PasswordResetForm } from "./components/auth/PasswordResetForm";
 import { RegisterForm } from "./components/auth/RegisterForm";
 import { UserProfileCard } from "./components/auth/UserProfileCard";
+import { ToastContainer } from "./components/common/ToastContainer";
+import AuthLayout from "./components/layout/AuthLayout";
 import Navbar from "./components/layout/Navbar";
 
 function App() {
