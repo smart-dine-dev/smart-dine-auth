@@ -7,6 +7,7 @@ import { UserProfileCard } from "./components/auth/UserProfileCard";
 import { ToastContainer } from "./components/common/ToastContainer";
 import AuthLayout from "./components/layout/AuthLayout";
 import Navbar from "./components/layout/Navbar";
+import useAuth from "./hooks/useAuth";
 
 function App() {
   const { isAuthenticated, currentView } = useAuth();
@@ -32,7 +33,7 @@ function App() {
       <Navbar />
       <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         {isAuthenticated ? (
-          <UserProfileCard />
+          <UserProfileCard /> // load related project here
         ) : (
           <AuthLayout>{renderAuthContent()}</AuthLayout>
         )}
