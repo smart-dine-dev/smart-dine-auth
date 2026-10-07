@@ -1,4 +1,10 @@
-import { navbar } from "./components/layout/Navbar";
+import { ForgotPasswordForm } from "./components/auth/ForgotPasswordForm";
+import { LoginForm } from "./components/auth/LoginForm";
+import { OtpVerifyModal } from "./components/auth/OtpVerifyModal";
+import { PasswordResetForm } from "./components/auth/PasswordResetForm";
+import { RegisterForm } from "./components/auth/RegisterForm";
+import { UserProfileCard } from "./components/auth/UserProfileCard";
+import Navbar from "./components/layout/Navbar";
 
 function App() {
   const { isAuthenticated, currentView } = useAuth();
@@ -21,7 +27,7 @@ function App() {
   return (
     <div className="auth-page">
       <div className="auth-bg-ambient" area-hidden="true" />
-      <navbar />
+      <Navbar />
       <main style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         {isAuthenticated ? (
           <UserProfileCard />
